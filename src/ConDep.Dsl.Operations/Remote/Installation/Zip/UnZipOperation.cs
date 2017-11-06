@@ -17,7 +17,7 @@ namespace ConDep.Dsl.Operations.Remote.Installation.Zip
 
         public override Result Execute(IOfferRemoteOperations remote, ServerConfig server, ConDepSettings settings, CancellationToken token)
         {
-            return remote.Execute.DosCommand(string.Format(@"%ProgramData%\chocolatey\tools\7za.exe x -y -o""{1}"" ""{0}""", _filePath, _destPath)).Result;
+            return remote.Execute.DosCommand(string.Format(@"%ProgramData%\chocolatey\tools\7z.exe x -y -o""{1}"" ""{0}""", _filePath, _destPath)).Result;
         }
 
         public override string Name
